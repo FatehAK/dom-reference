@@ -1,0 +1,8 @@
+div,
+li,
+ul>p {
+    background: #f4ffea;
+    border: 2px solid black;
+    cursor: pointer;
+    width: 250px;
+}

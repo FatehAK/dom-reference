@@ -1,0 +1,8 @@
+.container {
+    color: white;
+    background: rgb(145, 145, 145);
+    border: 2px solid black;
+    height: 1550px;
+    font-size: 2.5em;
+    font-weight: bold;
+}

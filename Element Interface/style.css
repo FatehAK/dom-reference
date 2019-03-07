@@ -1,0 +1,21 @@
+.classA {
+    background: crimson;
+}
+
+.classB {
+    background: orange;
+}
+
+.classC {
+    background: palegreen;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    margin: 0 0 0 10px;
+    border: 2px solid black;
+}
+
+.classD {
+    background: orchid;
+}

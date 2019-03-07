@@ -1,0 +1,17 @@
+.para1 {
+    font-size: 1.6em;
+    background: #fbd399;
+    font-style: italic !important;
+}
+
+.para1::first-letter {
+    color: whitesmoke;
+}
+
+.para2 {
+    font-size: 1.6em;
+    background: #fbd399;
+    font-style: italic !important;
+    text-align: center;
+    letter-spacing: 2px !important;
+}
