@@ -1,4 +1,4 @@
-# DOM-Demo
+# DOM-Reference
 This repository explains each of the interfaces of the Document Object Model in detail for a better understanding. The following interfaces are included -
 * **Document Interface** - The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content.
 * **Window Interface** - The Window interface represents a window containing a DOM document.
