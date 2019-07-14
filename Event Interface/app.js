@@ -11,13 +11,14 @@ const second = document.querySelector('.second');
 bubbleParent.addEventListener('click', (e) => {
     alert("Alert from bubbleParent Element");
     console.log("Bubble Parent");
+    console.log('BUBBLE: ' + e.eventPhase);
+    console.log(e.eventPhase);
     console.log(e.bubbles);
     console.log(e.cancelable);
     console.log(e.composed);
     console.log(e.currentTarget, this); //this gives window object in arrow function
     console.log(e.target);
     console.log(e.defaultPrevented);
-    console.log(e.eventPhase);
     console.log(e.type);
     console.log(e.timeStamp);
     console.log(e.isTrusted);
@@ -26,7 +27,7 @@ bubbleParent.addEventListener('click', (e) => {
 first.addEventListener('click', (e) => {
     alert("Alert from First Element");
     console.log("Bubble Child");
-    console.log(e.eventPhase);
+    console.log('AT_TARGET: ' + e.eventPhase);
 }, false);
 
 //*Capturing
@@ -34,12 +35,12 @@ first.addEventListener('click', (e) => {
 captureParent.addEventListener('click', function (e) {
     alert("Alert from captureParent Element");
     console.log("Capture Parent");
+    console.log('CAPTURE: ' + e.eventPhase);
     console.log(e.bubbles);
     console.log(e.cancelable);
     console.log(e.composed);
     console.log(e.currentTarget, this); //this gives actual element being refrenced
     console.log(e.target);
-    console.log(e.eventPhase);
     console.log(e.type);
     console.log(e.timeStamp);
     console.log(e.isTrusted);
@@ -48,11 +49,10 @@ captureParent.addEventListener('click', function (e) {
 second.addEventListener('click', (e) => {
     alert("Alert from Second Element");
     console.log("Capture Child");
-    console.log(e.eventPhase);
+    console.log('AT_TARGET: ' + e.eventPhase);
 }, true);
 
 //*Stop Propogating the events
-
 const myParent = document.querySelector('.myParent');
 const third = document.querySelector('.third');
 
@@ -68,7 +68,6 @@ third.addEventListener('click', (e) => {
 }, false);
 
 //*Event Delegation
-
 const delegateParent = document.querySelector('.delegateParent');
 
 //add shared event listener to all 'LI' elements instead of seperate ones
@@ -82,7 +81,7 @@ delegateParent.addEventListener('click', (e) => {
 });
 
 //*Event.preventDefault()
-
+//prevent default action of the element
 const myText = document.querySelector('.myText');
 
 myText.addEventListener('keypress', (e) => {
@@ -97,7 +96,6 @@ myText.addEventListener('keypress', (e) => {
 }, false);
 
 //*Event.stopImmediatePropogation()
-
 const testElement = document.querySelector('.testElement');
 
 testElement.addEventListener('click', () => {
