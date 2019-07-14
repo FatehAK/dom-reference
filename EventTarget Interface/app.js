@@ -5,17 +5,17 @@ const first = document.querySelector('.first');
 //**addEventListener()
 //*usage of 'this' in event listeners
 first.addEventListener('click', () => {
-    //refers to the Window object
+    //refers to the Window object for arrow fn
     console.log(this);
 }, false);
 
 first.addEventListener('click', function () {
-    //refers to the element itself
+    //refers to the element itself for anonymous fn
     console.log(this);
 }, false);
 
 first.addEventListener('click', function one() {
-    //refers to the element itself
+    //refers to the element itself for named fn
     console.log(this);
 }, false);
 
@@ -27,6 +27,8 @@ function myFun() {
     const spanElm = document.createElement('span');
     spanElm.innerHTML = "- I am only added once per click";
     second.appendChild(spanElm);
+    //refers to the element itself
+    console.log(this);
 }
 
 //span element appended only once even though two event listerners are attached
