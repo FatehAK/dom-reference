@@ -7,14 +7,15 @@ const third = document.querySelector('.third');
 
 //Properties
 console.log(container.baseURI);
-console.log(container.childNodes);
+console.log(container.childNodes); // contains text nodes and empty spaces too
+console.log(container.children); // contains only actual child nodes
 console.log(container.firstChild);
+console.log(container.firstElementChild);
 console.log(container.lastChild);
+console.log(container.lastElementChild);
 console.log(first.nextSibling);
-console.log(third.previousSibling);
-
-//Part of NonDocumentTypeChildNode Interface
 console.log(first.nextElementSibling);
+console.log(third.previousSibling);
 console.log(third.previousElementSibling);
 
 console.log(container.nodeName);

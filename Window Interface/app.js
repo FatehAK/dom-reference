@@ -6,7 +6,7 @@ const para = document.querySelector('.container > p');
 //Properties
 console.log(window.crypto);
 console.log(window.document);
-console.log(window.event);
+console.log(window.event); // undefined
 console.log(window.frames);
 console.log(window.history);
 console.log(window.innerWidth);
@@ -57,7 +57,7 @@ console.log('\n');
 //Methods
 //window.alert('Hi');
 //window.confirm('Sure?');
-//window.prompt("What is your name?");
+//window.prompt('What is your name?', 'defaultVal');
 window.blur();
 //window.close();
 window.focus();
@@ -91,10 +91,10 @@ window.scrollBy(-100, -100);
 let string = 'Hello';
 //string to base64 string
 let encoded = window.btoa(string);
-console.log(encoded);
+console.log(encoded); // SGVsbG8=
 //base64 string to string
 let decoded = window.atob(encoded);
-console.log(decoded);
+console.log(decoded); // Hello
 
 const timeout = window.setTimeout(
   bg => {

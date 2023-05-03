@@ -142,7 +142,7 @@ for (let i = 0; i < document.styleSheets[1].cssRules.length; i++) {
 //*CSS Interface
 
 //supports(property, value)
-console.log(CSS.supports('display: flex'));
+console.log(CSS.supports('display', 'flex'));
 console.log(CSS.supports('text-align', 'center'));
 console.log(
   CSS.supports(`(transform-style: preserve) or (-moz-transform-style: preserve) or
