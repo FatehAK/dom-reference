@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Event</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h4>Event Bubbling</h4>
     <div class="bubbleParent">
-        <p class="first">I am First</p>
+      <p class="first">I am First</p>
     </div>
 
     <h4>Event Capture</h4>
     <div class="captureParent">
-        <p class="second">I am Second</p>
+      <p class="second">I am Second</p>
     </div>
 
     <h4>Event Stop</h4>
     <div class="myParent">
-        <p class="third">I am Third</p>
+      <p class="third">I am Third</p>
     </div>
 
     <h4>Event Delegation</h4>
     <ul class="delegateParent">
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-        <p>Pargraph Element</p>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+      <p>Pargraph Element</p>
     </ul>
 
     <h4>Event.preventDefault()</h4>
-    <input type="text" class="myText">
+    <input type="text" class="myText" />
 
     <h4>Event.stopImmediatePropagation()</h4>
-    <div class="testElement"> Click Me!!</div>
+    <div class="testElement">Click Me!!</div>
 
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>

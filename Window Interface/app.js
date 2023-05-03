@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const container = document.querySelector('.container');
 const para = document.querySelector('.container > p');
@@ -40,7 +40,7 @@ console.log(window.sessionStorage);
 //session.clear();
 console.log('\n');
 
-console.log(window.name = 'myWindow');
+console.log((window.name = 'myWindow'));
 console.log(window.navigator);
 console.log(window.opener);
 console.log(window.outerWidth);
@@ -96,14 +96,23 @@ console.log(encoded);
 let decoded = window.atob(encoded);
 console.log(decoded);
 
-const timeout = window.setTimeout((bg) => {
+const timeout = window.setTimeout(
+  bg => {
     para.style.background = bg;
-}, 500, 'palegoldenrod');
+  },
+  500,
+  'palegoldenrod'
+);
 
 //window.clearTimeout(timeout);
 
-const interval = window.setInterval((color1, color2) => {
+const interval = window.setInterval(
+  (color1, color2) => {
     para.style.color = para.style.color === color2 ? color1 : color2;
-}, 500, 'crimson', 'purple');
+  },
+  500,
+  'crimson',
+  'purple'
+);
 
 //window.clearInterval(interval);

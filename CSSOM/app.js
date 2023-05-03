@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 const para1 = document.querySelector('.para1');
 
 //**Inline Style Modification
-console.log("Inline Style Modification\n");
-console.log("==============================================");
+console.log('Inline Style Modification\n');
+console.log('==============================================');
 
 //add inline style
 para1.style.color = 'crimson';
@@ -55,7 +55,7 @@ console.log(para1.style.getPropertyPriority('font-style'));
 
 //**External Style Modification
 console.log('External StyleSheet Modification\n');
-console.log("====================================================");
+console.log('====================================================');
 
 //*Stylesheet Interface
 //properties
@@ -116,7 +116,7 @@ console.log(styleObj.getPropertyPriority('letter-spacing'));
 
 //*CSS StyleSheet Interface
 //properties
-console.log("====Properties====");
+console.log('====Properties====');
 console.log(document.styleSheets[1]);
 console.log(document.styleSheets[1].cssRules[0]);
 console.log(document.styleSheets[1].ownerRule);
@@ -125,18 +125,18 @@ console.log(document.styleSheets[1].ownerRule);
 //insertRule('rule', index)
 document.styleSheets[1].insertRule('p { border: 2px solid black', 1);
 
-console.log("\n====The rules are====");
+console.log('\n====The rules are====');
 for (let i = 0; i < document.styleSheets[1].cssRules.length; i++) {
-    console.log(document.styleSheets[1].cssRules[i]);
+  console.log(document.styleSheets[1].cssRules[i]);
 }
 
 //deleteRule(index)
 //3rd rule is deleted
 document.styleSheets[1].deleteRule(2);
 
-console.log("\n====The rules after deletion are====");
+console.log('\n====The rules after deletion are====');
 for (let i = 0; i < document.styleSheets[1].cssRules.length; i++) {
-    console.log(document.styleSheets[1].cssRules[i]);
+  console.log(document.styleSheets[1].cssRules[i]);
 }
 
 //*CSS Interface
@@ -144,5 +144,7 @@ for (let i = 0; i < document.styleSheets[1].cssRules.length; i++) {
 //supports(property, value)
 console.log(CSS.supports('display: flex'));
 console.log(CSS.supports('text-align', 'center'));
-console.log(CSS.supports(`(transform-style: preserve) or (-moz-transform-style: preserve) or
-(-o-transform-style: preserve) or (-webkit-transform-style: preserve)`));
+console.log(
+  CSS.supports(`(transform-style: preserve) or (-moz-transform-style: preserve) or
+(-o-transform-style: preserve) or (-webkit-transform-style: preserve)`)
+);

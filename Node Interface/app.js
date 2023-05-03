@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const container = document.querySelector('.container');
 const first = document.querySelector('.first');
@@ -23,7 +23,7 @@ console.log(container.nodeValue);
 console.log(container.ownerDocument);
 console.log(first.parentNode);
 console.log(first.parentElement);
-console.log(first.textContent = 'First Paragraph');
+console.log((first.textContent = 'First Paragraph'));
 
 //Methods
 //appendChild() vs append()
@@ -44,12 +44,12 @@ container.appendChild(first, second, third);
 container.append(first, second, third, fourth);
 //Not possible to append DOM Strings in appendChild
 try {
-    container.appendChild("Hello from appendChild");
+  container.appendChild('Hello from appendChild');
 } catch (e) {
-    console.error(e);
+  console.error(e);
 }
 //Possible in append
-container.append("Hello from append");
+container.append('Hello from append');
 
 //Cloning a node with boolean deep value (check id's of both nodes)
 const cloneFour = fourth.cloneNode(true);
@@ -63,10 +63,10 @@ console.log(container.hasChildNodes());
 
 //insertBefore(newNode, referenceNode)
 const newPara1 = document.createElement('p');
-newPara1.innerHTML = 'I\'m inserted before fourth para';
+newPara1.innerHTML = "I'm inserted before fourth para";
 container.insertBefore(newPara1, fourth);
 const newPara2 = document.createElement('p');
-newPara2.innerHTML = 'I\'m inserted after the fourth para';
+newPara2.innerHTML = "I'm inserted after the fourth para";
 //Simulating insertAfter()
 container.insertBefore(newPara2, fourth.nextSibling);
 

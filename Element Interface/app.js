@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 const para = document.querySelector('.main > p');
 // para replaced by new para
-para.outerHTML = "<p id=\"summary\" style=\"color: crimson;\">Hello!!</p>";
+para.outerHTML = '<p id="summary" style="color: crimson;">Hello!!</p>';
 // select that new para
 const newPara = document.querySelector('.main > p');
 // Add or Modify Classes
@@ -22,19 +22,19 @@ newPara.className = 'classC';
 
 //Custom Elements & Shadow DOM
 class AnotherElement extends HTMLElement {
-    constructor() {
-        super();
-        const shadow = this.attachShadow({
-            mode: 'open'
-        });
-        const style = document.createElement('style');
-        const customPara = document.createElement('p');
-        customPara.innerHTML = "I'm a shadow custom paragraph";
-        style.innerHTML = `:host(.yo) {color: blue; font-style: italic; background: yellow; display: block;}`;
-        shadow.appendChild(style);
-        shadow.appendChild(customPara);
-        console.log(this.shadowRoot);
-    }
+  constructor() {
+    super();
+    const shadow = this.attachShadow({
+      mode: 'open',
+    });
+    const style = document.createElement('style');
+    const customPara = document.createElement('p');
+    customPara.innerHTML = "I'm a shadow custom paragraph";
+    style.innerHTML = `:host(.yo) {color: blue; font-style: italic; background: yellow; display: block;}`;
+    shadow.appendChild(style);
+    shadow.appendChild(customPara);
+    console.log(this.shadowRoot);
+  }
 }
 customElements.define('another-element', AnotherElement);
 
@@ -49,7 +49,7 @@ console.log(newPara.id);
 console.log(newPara.localName);
 
 //Methods
-console.log("\n");
+console.log('\n');
 console.log(newPara.closest('div'));
 console.log(newPara.getAttribute('style'));
 console.log(newPara.getAttributeNames());
@@ -62,7 +62,7 @@ console.log(newPara.hasAttributes());
 newPara.insertAdjacentText('beforebegin', 'Inserted Before Begin');
 newPara.insertAdjacentHTML('afterbegin', '<p>Inserted After Begin</p>');
 const pElem = document.createElement('p');
-pElem.innerHTML = "Inserted Before end";
+pElem.innerHTML = 'Inserted Before end';
 newPara.insertAdjacentElement('beforeend', pElem);
 newPara.insertAdjacentHTML('afterend', '<p>Inserted After End</p>');
 
